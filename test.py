@@ -1,3 +1,19 @@
+print("=== Welcome to My Python Program ===")
+print("This program includes various fun and useful features.like")
+print("1. Personal Information Collector")
+print("2. Lucky Number Game")
+print("3. Simple Chat Bot")
+print("4. Temperature Converter")
+print("5. Simple Calculator")
+print("6. Circumference and Area Calculator")
+print("7. Username Validation")
+print("8. Countdown Timer")
+print("9. Adventure Game")
+print("10. 2D Loop Example")
+print("11. Multiple Choice Quiz")
+
+
+
 #1 Personal Information Collector
 
 def personal_info_collector():
@@ -11,9 +27,6 @@ def personal_info_collector():
     print(f"Hello, my name is {name}. I'm {age} years old and in Grade {grade}. I love {hobby}.")
     print(f"And I will be {age + 1} years old next year.")
 
-if __name__ == "__main__":
-    # This code runs only if the script is executed directly, not if imported
-    personal_info_collector()
 
 #2 Lucky Number Game
 import random
@@ -32,9 +45,7 @@ def lucky_number_game():
         elif guess > lucky_number:
             print("The lucky number is lower")
 
-# To run only the lucky number game:
-if __name__ == "__main__":
-    lucky_number_game()
+
 
 #3 simple chatbot
 def chat_bot():
@@ -60,9 +71,6 @@ def chat_bot():
         if more.lower() != "yes":
             print("Thank you for chatting! Goodbye!")
             break
-
-if __name__ == "__main__":
-    chat_bot()
 
 #5 temperature converter
 def temperature_converter():
@@ -102,8 +110,6 @@ def temperature_converter():
     else:
         print("Invalid choice. Please enter 'C' or 'F'.")
 
-if __name__ == "__main__":
-    temperature_converter()
 #python calculater
 def simple_calculater():
     print("which do you want (+)/(-)/(*)/(/)")
@@ -124,11 +130,10 @@ def simple_calculater():
         print(int(result))
     else:
         print("invalid input")
-if __name__ == "__main__":
-    simple_calculater()
-    # circumference
+
+# circumference
     print("===Circumference===")
-    import math
+import math
 
 
 def circumference():
@@ -136,9 +141,6 @@ def circumference():
     c = float(2 * math.pi * r)
     print(f"The circumference of the circle is {c:.3f}")
 
-
-if __name__ == "__main__":
-    circumference()
 # area
 print("===Area===")
 
@@ -147,8 +149,7 @@ def area():
     r = float(input("Enter the radius of the circle: "))
     a = float(math.pi * pow(r, 2))
     print(f"The Area of the circle is {a:.3f}")
-if __name__ == "__main__":
-    area()
+
 #Username validation
 print("===User validation===")
 def user():
@@ -161,8 +162,6 @@ def user():
         print("there should not be any digit")
     else:
         print(f"Welcome {username}!")
-if __name__ == "__main__":
-    user()
 
 #count down by sec and min
 import time
@@ -175,8 +174,7 @@ def timer():
         time.sleep(1)#after each iteration you will sleep for 1 second or pause the program
 
 print("TIMES UP!!")
-if __name__ == "__main__":
-    timer()
+
 #game
 def game():
     import time
@@ -260,8 +258,7 @@ def game():
 
     # Start the game
     intro()
-if __name__ == "__main__":
-    game()
+
 #2d loop
 def d():
     fruits = ["apple", "banana", "orange"]
@@ -273,8 +270,7 @@ def d():
     for list in groceries:#list is getting every value first(single) of grocery which is now a list, or it becomes fruits
         for elem in list:#list has got the element od groceries(fruits) now elem will get every first(single)/(fruits)
             print(elem)
-if __name__ == "__main__":
-    d()
+
 #Multiple choice
 def choice():
     questions = [
@@ -322,5 +318,29 @@ def choice():
     percentage = int(score / len(questions) * 100)
     print(f"\n🎯 Your score: {score} out of {len(questions)}")
     print(f"📊 Percentage: {percentage}%")
-if __name__ == "__main__":
+want_to_play = input("Enter the progrsm you want to test from (1-11): ")
+if not want_to_play.isdigit() or int(want_to_play) < 1 or int(want_to_play) > 11:
+    print("Invalid input. Please enter a number between 1 and 11.")
+elif int(want_to_play) == 1:
+    personal_info_collector()
+elif int(want_to_play) == 2:
+    lucky_number_game()
+elif int(want_to_play) == 3:
+    chat_bot()
+elif int(want_to_play) == 4:
+    temperature_converter()
+elif int(want_to_play) == 5:
+    simple_calculater()
+elif int(want_to_play) == 6:
+    circumference()
+    area()
+elif int(want_to_play) == 7:
+    user()
+elif int(want_to_play) == 8:
+    timer()
+elif int(want_to_play) == 9:
+    game()
+elif int(want_to_play) == 10:
+    d()
+elif int(want_to_play) == 11:
     choice()
